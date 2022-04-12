@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #settings {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        padding: 2px;
+        background-color: rgba(0, 0, 0, 0.491);
+      }
+      #settings > button {
+        margin: 5px;
+        font-weight: bold;
+        padding: 8px;
+        border-radius: 8px;
+        /* border: 1px solid grey; */
+        border: none;
+        background: transparent;
+        color: white;
+        transition: 1s;
+      }
+      #settings > button:hover {
+        background-color: white;
+        color: black;
+      }
+      .board {
+        background: black;
+        padding: 20px;
+        display: grid;
+        justify-content: center;
+        gap: 5px;
+        animation: rotate-hue infinite 10s ease-in;
+      }
+      .board-ele {
+        transition: background 0.2s linear;
+        border-radius: 5px;
+        border: "1px solid black";
+      }
+      @keyframes rotate-hue {
+        0%,
+        100% {
+          filter: hue-rotate(0deg);
+        }
+        50% {
+          filter: hue-rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script defer type="text/jsx" src="./index.jsx"></script>
+  </body>
+</html>
